@@ -1,0 +1,25 @@
+SDL 2 What is that? 
+Partie 1 
+Je vous demande de construire votre projet SDL2/C pas à pas, votre premier travail sera de créer un repository (ou branch sur repository existant) afin de pouvoir créer des commit des différentes étapes de votre projet. Les réponses aux questions doivent être rédigées dans votre documentation, les codes seront réalisés à la volée dans votre projet. Les codes doivent impérativement être testés. Les codes et la documentation seront indexés dans votre repository. 
+
+1) Qu’est-ce que la SDL 2 ? (10 points)  
+La SDL est une bibliothèque multimédia. Elle permet un accès audio, souris, joystick, graphiques. Donc permet d’afficher des fenêtres et d’afficher des images, de jouer des sons, et pouvoir gérer les commandes clavier/souris.
+
+2) Que peut faire la SDL 2 ? (10 points) 
+Elle permet de faire différents types de projet, jeux en 2D par exemple. Donc peut gérer le tile mapping, les collisions, les évènements, les combats.
+
+3) Sur quelles plateformes fonctionne la SDL 2 ? (10 points) 
+La SDL fonctionne sur Apple, Linux, Windows.
+
+4) Comment obtenir et installer la SDL 2 sur un EDI ? Donnez les étapes de la configuration d’un projet SDL2 avec CodeBlocks (gcc). (10 points) 
+Il faut se rendre sur le site http://www.libsdl.org/download-2.0.php#source,
+Pour la configuration ,il est préférable de mettre l’archive dans la racine de codeblocks , puis sur codeblocks .Dans le project/build options puis aller dans linker settings ,on ajoute les chemins 
+•	lib\libSDL2main.a
+•	lib\libSDL2.dll.a
+Pour on ajoute -lmingw32 dans other linker option.
+Puis dans search directorie, dans :
+•	Compiler:  le chemin SDL2-2.0.10\i686-w64-mingw32\include
+•	Linker: le chemin SDL2-2.0.10\i686-w64-mingw32\lib
+
+5) Quelles sont les différences entre SDL 1 et SDL 2 ? (5 points) 
+La SDL2 est une amélioration du 1, pour la création de la fenêtre et l’utilisation de textures avec une accélération matérielle, il apporte plusieurs correctifs pour la SDL1 et apporte quelques autres fonctionnalités.
