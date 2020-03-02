@@ -106,3 +106,6 @@ int SDL_SetWindowBrightness(SDL_Window* window, float luminosite);
 
 // récupérer la luminosité
 float SDL_GetWindowBrightness(SDL_Window* window);
+
+9) Gérer un rendu : qu’est-ce qu’un renderer, comment est-il associé à la fenêtre SDL 2 ? Donnez et expliquez le code permettant de gérer un rendu, création, affichage, effacement…. (15 points) 
+C'est un moteur de rendu d’une fenêtre,il va contenir les informations du contexte d'affichage de la fenêtre. C’est-à-dire de créer une image que l’on va afficher.Il est contenu dans une structure SDL_Renderer.

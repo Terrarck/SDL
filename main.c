@@ -6,6 +6,7 @@ int main(int argc, char *argv[])
 {
     /**Variable**/
     SDL_Window *Window = NULL;/*On initialise la fenêtre*/
+    SDL_Renderer* renderer;/*Déclaration du renderer*/
 
     /**Initialisation**/
     if(0 != SDL_Init(SDL_INIT_EVERYTHING))/* initialisation*/
@@ -24,8 +25,19 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
+    // Création du renderer
+    renderer = SDL_CreateRenderer(fenetre, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+
+    /**Renderer Error**/
+    if(NULL == renderer)
+    {
+    printf("Erreur lors de la creation d'un renderer : %s",SDL_GetError());
+    return EXIT_FAILURE;
+    }
+
     getchar();//Attendre une validation pour fermer la fenêtre
-    SDL_DestroyWindow(Window); //Supprime la fenêtre
+    SDL_DestroyRenderer(renderer); // Destruction du renderer et de la fenêtre :
+    SDL_DestroyWindow(Window); //Supprime la fenêtre*
 
     /**Quitter**/
     SDL_Quit();
