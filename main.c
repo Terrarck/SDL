@@ -5,15 +5,27 @@
 int main(int argc, char *argv[])
 {
     /**Variable**/
+    SDL_Window *Window = NULL;/*On initialise la fenêtre*/
 
     /**Initialisation**/
     if(0 != SDL_Init(SDL_INIT_EVERYTHING))/* initialisation*/
     {
-        fprintf(stderr, "Erreur SDL_Init : %s", SDL_GetError());
+        fprintf(stderr, "Erreur SDL_Init : %s", SDL_GetError());/*si la SDL ne fonctionne pas ,on reçoit un message d'erreur*/
         return EXIT_FAILURE;
     }
-    /****/
+    /**Ouverture de la fenêtre**/
+    Window = SDL_CreateWindow("SDL2", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+                              300,300, SDL_WINDOW_SHOWN);
 
+    /**Fenetre Error**/
+    if(NULL == Window)
+    {
+        fprintf(stderr, "Erreur SDL_CreateWindow : %s", SDL_GetError());
+        return EXIT_FAILURE;
+    }
+
+    getchar();//Attendre une validation pour fermer la fenêtre
+    SDL_DestroyWindow(Window); //Supprime la fenêtre
 
     /**Quitter**/
     SDL_Quit();
