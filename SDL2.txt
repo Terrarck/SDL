@@ -62,3 +62,47 @@ SDL_WINDOW_SHOWN	   rend juste visible la fenêtre.
 
 Puis on supprime la fenêtre.
 SDL_DestroyWindow(Window); //Supprime la fenêtre
+
+8) Gestion d’une fenêtre SDL 2, donnez les primitives associées à la fenêtre SDL 2. (10 points) 
+
+//Créer la fenêtre
+SDL_CreateWindow
+
+//Supprimer la fenêtre
+SDL_DestroyWindow
+
+// changer titre de la fenêtre est la chaîne de caractère passée en deuxième argument
+void SDL_SetWindowTitle(SDL_Window* window, const char* title);
+
+// ajoute une icône à la fenêtre
+void SDL_SetWindowIcon(SDL_Window*  window, SDL_Surface* icon);
+
+// déplace la fenêtre à la position (x;y) dans le repère présenté précédemment
+void SDL_SetWindowPosition(SDL_Window* window , int x, int y);
+
+// redimensionne la fenêtre qui sera ensuite large de w pixels et haute de h pixels
+void SDL_SetWindowSize(SDL_Window* window , int w , int h);
+
+// la position de la fenêtre sera placée dans les pointeurs x et y
+void SDL_GetWindowPosition(SDL_Window* window, int* x, int* y);
+
+// la taille de la fenêtre sera placée dans les pointeurs w et h
+void SDL_GetWindowSize(SDL_Window* window, int* w, int* h);
+
+// agrandissement de la fenêtre
+void SDL_MaximizeWindow(SDL_Window* window);  
+
+// réduction de la fenêtre
+void SDL_MinimizeWindow(SDL_Window* window);  
+
+// restauration de la fenêtre
+void SDL_RestoreWindow(SDL_Window* window);  
+
+//Mettre en pleine écran
+int SDL_SetWindowFullscreen(SDL_Window* window , SDL_bool fullscreen);
+
+// définir la luminosité de l'écran
+int SDL_SetWindowBrightness(SDL_Window* window, float luminosite);
+
+// récupérer la luminosité
+float SDL_GetWindowBrightness(SDL_Window* window);
