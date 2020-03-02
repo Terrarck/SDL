@@ -23,3 +23,16 @@ Puis dans search directorie, dans :
 
 5) Quelles sont les différences entre SDL 1 et SDL 2 ? (5 points) 
 La SDL2 est une amélioration du 1, pour la création de la fenêtre et l’utilisation de textures avec une accélération matérielle, il apporte plusieurs correctifs pour la SDL1 et apporte quelques autres fonctionnalités.
+
+6) Pour utiliser la SDL 2 dans votre projet, vous devez initialiser l’instance SDL 2, quelles sont les étapes d’initialisation à réaliser pour utiliser la lib SDL 2, donnez le code correspondant et expliquez précisément chaque instruction. (15 points) 
+Pour être utilisée, la SDL doit d’abord être initialisée. Pour cela, nous devons utiliser la fonction SDL_Init.
+
+int SDL_Init(Uint32 flags)
+Cette fonction prend en paramètre une liste de flags sous la forme d’un entier, ceux-ci correspondants aux sous-systèmes que l’on veut initialiser.
+
+const char* SDL_GetError(void)
+Cette fonction ne prend aucun paramètre et renvoie une chaine de caractères qui est un message à propos de la dernière erreur que la SDL a rencontrée.
+
+void SDL_Quit(void)
+Cette fonction ne prend pas d’arguments et ne renvoie rien. Elle permet de quitter la SDL.
+
