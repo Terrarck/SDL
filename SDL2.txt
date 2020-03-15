@@ -116,3 +116,5 @@ C'est un moteur de rendu d’une fenêtre,il va contenir les informations du con
 
 12) Donnez le code permettant d’afficher un fond rouge dans le rendu.
 SDL_SetRenderDrawColor(pRenderer, 255,0,0,255);
+
+13) Dessiner dans le rendu : donnez le code des fonctions permettant de dessiner dans le rendu les formes suivantes : (voir screenshot) - Carré vide - Carré plein - Cercle vide - Cercle plein. 
