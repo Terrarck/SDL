@@ -117,4 +117,13 @@ C'est un moteur de rendu d’une fenêtre,il va contenir les informations du con
 12) Donnez le code permettant d’afficher un fond rouge dans le rendu.
 SDL_SetRenderDrawColor(pRenderer, 255,0,0,255);
 
-13) Dessiner dans le rendu : donnez le code des fonctions permettant de dessiner dans le rendu les formes suivantes : (voir screenshot) - Carré vide - Carré plein - Cercle vide - Cercle plein. 
+13) Dessiner dans le rendu : donnez le code des fonctions permettant de dessiner dans le rendu les formes suivantes : (voir screenshot) - Carré vide - Carré plein - Cercle vide - Cercle plein.
+
+14) Quelles sont les fonctions permettant de dessiner des points et des lignes ? (5 points)
+Il y a deux fonctions pour dessiner des points une pour un seul et une autre pour un ensemble de points.
+SDL_RenderDrawPoint(renderer,x,y).
+SDL_RenderDrawPoints(renderer,const SDL_Point* points, count).
+
+Il y a deux fonctions pour dessiner des lignes une pour une seul et une autre pour un ensemble de lignes.
+SDL_RenderDrawLine(renderer,x1,y1,x2,y2).
+SDL_RenderDrawLines(renderer,const SDL_Point* points, count).
