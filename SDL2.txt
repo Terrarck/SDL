@@ -137,3 +137,5 @@ SDL_Delay applique un delai en mettant en pause la suite du programme jusqu'à c
 
 17) Qu’est-ce qu’une surface en SDL 2 (5 points) 
 Une surface est l'équivalent des textures mais leur avantage est quel est modifiable pixel par pixel. 
+
+18) Donnez le code permettant de créer une surface (10 points) 

@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     SDL_Window *Window = NULL;/*On initialise la fenêtre*/
     SDL_Renderer* renderer;/*Déclaration du renderer*/
     SDL_Rect rect = {20,20,100,100};/*On initialise un rectangle (position X, position Y, largeur, hauteur)*/
+    SDL_Surface * surface= NULL;/*On initialise un pointeur de type surface*/
     //SDL_Point point = {20,40};/*On initialise point position X, position Y*/
 
     /**Initialisation**/
@@ -39,6 +40,12 @@ int main(int argc, char *argv[])
     {
     printf("Erreur lors de la creation d'un renderer : %s",SDL_GetError());
     return EXIT_FAILURE;
+    }
+        surface = SDL_CreateRGBSurface(0,200,200,32,0,0,0,0);/*On créer la surface*/
+
+        if(surface == NULL) {
+        printf("Erreur lors de la surface a echoue : %s", SDL_GetError());
+        return EXIT_FAILURE;
     }
 
     /* Applique une couleur (RGB, alpha) */
@@ -69,6 +76,7 @@ int main(int argc, char *argv[])
         SDL_Delay(1000);
 
     getchar();//Attendre une validation pour fermer la fenêtre
+    SDL_FreeSurface(surface);//On détruit la surface
     SDL_DestroyRenderer(renderer); // Destruction du renderer et de la fenêtre :
     SDL_DestroyWindow(Window); //Supprime la fenêtre*
 
