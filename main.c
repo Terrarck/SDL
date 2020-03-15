@@ -42,38 +42,43 @@ int main(int argc, char *argv[])
     return EXIT_FAILURE;
     }
         surface = SDL_CreateRGBSurface(0,200,200,32,0,0,0,0);/*On créer la surface*/
+        surface = SDL_GetWindowSurface(Window);
 
         if(surface == NULL) {
         printf("Erreur lors de la surface a echoue : %s", SDL_GetError());
         return EXIT_FAILURE;
     }
 
-    /* Applique une couleur (RGB, alpha) */
-        SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+        Uint32 color = SDL_MapRGB(surface->format,100,00,120); /*On applique un RGB sur la surface*/
+        SDL_FillRect(surface,NULL, color);/*On fill la surface */
+        SDL_UpdateWindowSurface(Window);/*On met à jour la fenêtre */
 
-    /* Applique la couleur */
-        SDL_RenderClear(renderer);
-
-    /* Affiche la couleur présente */
-        SDL_RenderPresent(renderer);
-
-
-        SDL_SetRenderDrawColor(renderer,0,0,0,255);
-        SDL_RenderDrawRect(renderer,&rect);/*On dessine le rectangle*/
-        SDL_RenderPresent(renderer);
-        SDL_Delay(1000);
-
-        SDL_RenderFillRect(renderer,&rect); /*Change la couleur*/
-        SDL_RenderPresent(renderer);
-        SDL_Delay(1000);
-
-        SDL_DrawCircle(renderer,200,100,40);/*On dessine le cercle*/
-        SDL_RenderPresent(renderer);
-        SDL_Delay(1000);
-
-        SDL_DrawFilledCircle(renderer,200,200,40);/*On remplit de couleur*/
-        SDL_RenderPresent(renderer);
-        SDL_Delay(1000);
+//    /* Applique une couleur (RGB, alpha) */
+//        SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+//
+//    /* Applique la couleur */
+//        SDL_RenderClear(renderer);
+//
+//    /* Affiche la couleur présente */
+//        SDL_RenderPresent(renderer);
+//
+//
+//        SDL_SetRenderDrawColor(renderer,0,0,0,255);
+//        SDL_RenderDrawRect(renderer,&rect);/*On dessine le rectangle*/
+//        SDL_RenderPresent(renderer);
+//        SDL_Delay(1000);
+//
+//        SDL_RenderFillRect(renderer,&rect); /*Change la couleur*/
+//        SDL_RenderPresent(renderer);
+//        SDL_Delay(1000);
+//
+//        SDL_DrawCircle(renderer,200,100,40);/*On dessine le cercle*/
+//        SDL_RenderPresent(renderer);
+//        SDL_Delay(1000);
+//
+//        SDL_DrawFilledCircle(renderer,200,200,40);/*On remplit de couleur*/
+//        SDL_RenderPresent(renderer);
+//        SDL_Delay(1000);
 
     getchar();//Attendre une validation pour fermer la fenêtre
     SDL_FreeSurface(surface);//On détruit la surface
