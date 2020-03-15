@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     //SDL_Rect rect = {20,20,100,100};/*On initialise un rectangle (position X, position Y, largeur, hauteur)*/
     SDL_Surface * surface= NULL;/*On initialise un pointeur de type surface*/
     SDL_Surface * surface2 = NULL;
+    SDL_Texture * texture = NULL;
     //SDL_Point point = {20,40};/*On initialise point position X, position Y*/
 
     /**Initialisation**/
@@ -50,19 +51,21 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-        Uint32 color = SDL_MapRGB(surface->format,100,00,120); /*On applique un RGB sur la surface*/
-        Uint32 color2 = SDL_MapRGB(surface2->format,0,100,255);/*On applique un RGB sur la surface*/
+    texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET,100,100);
 
-        SDL_FillRect(surface,NULL, color);/*On fill la surface */
-        SDL_FillRect(surface2,NULL, color2);/*On fill la surface */
-
-        SDL_UpdateWindowSurface(Window);/*On met à jour la fenêtre */
-
-        SDL_Delay(1000);
-
-        SDL_BlitSurface(surface2,NULL,surface,NULL);/*on fait une transition de surface*/
-        SDL_UpdateWindowSurface(Window);
-
+//        Uint32 color = SDL_MapRGB(surface->format,100,00,120); /*On applique un RGB sur la surface*/
+//        Uint32 color2 = SDL_MapRGB(surface2->format,0,100,255);/*On applique un RGB sur la surface*/
+//
+//        SDL_FillRect(surface,NULL, color);/*On fill la surface */
+//        SDL_FillRect(surface2,NULL, color2);/*On fill la surface */
+//
+//        SDL_UpdateWindowSurface(Window);/*On met à jour la fenêtre */
+//
+//        SDL_Delay(1000);
+//
+//        SDL_BlitSurface(surface2,NULL,surface,NULL);/*on fait une transition de surface*/
+//        SDL_UpdateWindowSurface(Window);
+//
 //    /* Applique une couleur (RGB, alpha) */
 //        SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
 //
@@ -91,6 +94,7 @@ int main(int argc, char *argv[])
 //        SDL_Delay(1000);
 
     getchar();//Attendre une validation pour fermer la fenêtre
+    SDL_DestroyTexture(texture);
     SDL_FreeSurface(surface);//On détruit la surface
     SDL_DestroyRenderer(renderer); // Destruction du renderer et de la fenêtre :
     SDL_DestroyWindow(Window); //Supprime la fenêtre*
