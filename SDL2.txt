@@ -132,3 +132,5 @@ SDL_RenderDrawLines(renderer,const SDL_Point* points, count).
 SDL_RenderClear applique une couleur sur l’ensemble de la fenêtre.
 SDL_RenderPresent sert à mettre à jours l'affichage avec les modifications apportée sur le renderer.
 
+16) Expliquez SDL_Delay (5 points) 
+SDL_Delay applique un delai en mettant en pause la suite du programme jusqu'à ce que le temps arrive à zéro sur une durée en millisecondes.
