@@ -111,3 +111,5 @@ float SDL_GetWindowBrightness(SDL_Window* window);
 C'est un moteur de rendu d’une fenêtre,il va contenir les informations du contexte d'affichage de la fenêtre. C’est-à-dire de créer une image que l’on va afficher.Il est contenu dans une structure SDL_Renderer.
 
 10) SDL_Point et SDL_Rect : Donnez et expliquez le code de la déclaration d’un SDL_Point et SDL_Rect (5 points) 
+
+11) Les couleurs avec la SDL2 : donnez les instructions permettant de gérer la couleur avec la SDL 2 

@@ -37,6 +37,15 @@ int main(int argc, char *argv[])
     return EXIT_FAILURE;
     }
 
+    /* Applique une couleur (RGB, alpha) */
+        SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+
+    /* Applique la couleur */
+        SDL_RenderClear(renderer);
+
+    /* Affiche la couleur présente */
+        SDL_RenderPresent(renderer);
+
     getchar();//Attendre une validation pour fermer la fenêtre
     SDL_DestroyRenderer(renderer); // Destruction du renderer et de la fenêtre :
     SDL_DestroyWindow(Window); //Supprime la fenêtre*
