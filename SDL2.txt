@@ -156,3 +156,13 @@ SDL_RenderCopy permet d'afficher la texture que l'on a paramètrer.
 SDL_QueryTexture permet d'obtenir les dimensions de la texture.
 
 25) Les Images : La SDL2 ne prend en charge nativement que les formats bmp, si vous souhaitez utiliser d’autres formats vous devrez associer la lib SDL2_image à votre projet. SDL_LoadBMP, est la méthode permettant d’utiliser des bmp, donnez le code permettant de tester cette fonction. (10 points) 
+
+26) Donnez le code permettant de créer une texture à partir d’une image (bmp) (10 points) 
+
+27) Prenez une image de votre choix au format bmp et testez les fonctions précédentes en ajoutant le code permettant d’afficher l’image dans le rendu. (15 points) Résultat de l’affichage du bitmap. 
+
+28) Depuis le début nous créons des instances permettant de manipuler la sdl2, cependant nous oublions une étape essentielle dans son utilisation, la destruction des instances, faites un relevé des instances crées et identifier les méthodes que vous devez utiliser pour libérer celles-ci. (15 points) 
+SDL_DestroySurface(surface);
+SDL_DestroyTexture(texture);
+SDL_DestroyRenderer(renderer);
+SDL_DestroyWindow(window);
