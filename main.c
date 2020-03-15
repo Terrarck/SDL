@@ -10,11 +10,11 @@ int main(int argc, char *argv[])
 {
     /**Variable**/
     SDL_Window *Window = NULL;/*On initialise la fenêtre*/
-    SDL_Renderer* renderer;/*Déclaration du renderer*/
+    SDL_Renderer *renderer;/*Déclaration du renderer*/
     SDL_Rect rect = {20,20,100,100};/*On initialise un rectangle (position X, position Y, largeur, hauteur)*/
     SDL_Rect dim = {0,0,0,0};
     SDL_Surface * surface= NULL;/*On initialise un pointeur de type surface*/
-    SDL_Surface * surface2 = NULL;
+    //SDL_Surface * surface2 = NULL;
     SDL_Texture * texture = NULL;
     //SDL_Point point = {20,40};/*On initialise point position X, position Y*/
 
@@ -44,26 +44,28 @@ int main(int argc, char *argv[])
     printf("Erreur lors de la creation d'un renderer : %s",SDL_GetError());
     return EXIT_FAILURE;
     }
-        surface = SDL_CreateRGBSurface(0,200,200,32,0,0,0,0);/*On créer la surface*/
-        surface = SDL_GetWindowSurface(Window);
-        surface2 = SDL_CreateRGBSurface(0,surface->w,surface->h,32,0,0,0,0);
-        if((surface == NULL)|| (surface2 == NULL)) {
+        //surface = SDL_CreateRGBSurface(0,200,200,32,0,0,0,0);/*On créer la surface*/
+        surface = SDL_LoadBMP("image.bmp");
+        //surface = SDL_GetWindowSurface(Window);
+        //surface2 = SDL_CreateRGBSurface(0,surface->w,surface->h,32,0,0,0,0);
+        //if((surface == NULL)|| (surface2 == NULL)) {
+        if(surface == NULL){
         printf("Erreur lors de la surface a echoue : %s", SDL_GetError());
         return EXIT_FAILURE;
     }
 
     texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET,100,100);
 
-    SDL_SetRenderDrawColor(renderer,0,255,0,255);
-    SDL_SetRenderTarget(renderer,texture);
-    SDL_RenderFillRect(renderer, &rect);
-    SDL_SetRenderTarget(renderer, NULL);
+//    SDL_SetRenderDrawColor(renderer,0,255,0,255);
+//    SDL_SetRenderTarget(renderer,texture);
+//    SDL_RenderFillRect(renderer, &rect);
+//    SDL_SetRenderTarget(renderer, NULL);
     SDL_RenderPresent(renderer);
 
     //SDL_RenderCopy(renderer, texture, NULL, &rect);
     SDL_QueryTexture(texture,NULL,NULL,&dim.w,&dim.h);
     SDL_RenderCopy(renderer, texture, NULL, &dim);
-    SDL_RenderPresent(renderer);
+    //SDL_RenderPresent(renderer);
 
 
 

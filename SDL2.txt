@@ -154,3 +154,5 @@ SDL_RenderCopy permet d'afficher la texture que l'on a paramètrer.
 
 24) SDL_QueryTexture : A quoi sert cette méthode, donnez le code pour tester cette méthode (10 points) 
 SDL_QueryTexture permet d'obtenir les dimensions de la texture.
+
+25) Les Images : La SDL2 ne prend en charge nativement que les formats bmp, si vous souhaitez utiliser d’autres formats vous devrez associer la lib SDL2_image à votre projet. SDL_LoadBMP, est la méthode permettant d’utiliser des bmp, donnez le code permettant de tester cette fonction. (10 points) 
