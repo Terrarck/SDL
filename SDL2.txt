@@ -134,3 +134,6 @@ SDL_RenderPresent sert à mettre à jours l'affichage avec les modifications app
 
 16) Expliquez SDL_Delay (5 points) 
 SDL_Delay applique un delai en mettant en pause la suite du programme jusqu'à ce que le temps arrive à zéro sur une durée en millisecondes.
+
+17) Qu’est-ce qu’une surface en SDL 2 (5 points) 
+Une surface est l'équivalent des textures mais leur avantage est quel est modifiable pixel par pixel.
