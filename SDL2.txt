@@ -113,3 +113,6 @@ C'est un moteur de rendu d’une fenêtre,il va contenir les informations du con
 10) SDL_Point et SDL_Rect : Donnez et expliquez le code de la déclaration d’un SDL_Point et SDL_Rect (5 points) 
 
 11) Les couleurs avec la SDL2 : donnez les instructions permettant de gérer la couleur avec la SDL 2 
+
+12) Donnez le code permettant d’afficher un fond rouge dans le rendu.
+SDL_SetRenderDrawColor(pRenderer, 255,0,0,255);
