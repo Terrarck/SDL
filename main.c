@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     SDL_Window *Window = NULL;/*On initialise la fenêtre*/
     SDL_Renderer* renderer;/*Déclaration du renderer*/
     SDL_Rect rect = {20,20,100,100};/*On initialise un rectangle (position X, position Y, largeur, hauteur)*/
+    SDL_Rect dim = {0,0,0,0};
     SDL_Surface * surface= NULL;/*On initialise un pointeur de type surface*/
     SDL_Surface * surface2 = NULL;
     SDL_Texture * texture = NULL;
@@ -59,8 +60,12 @@ int main(int argc, char *argv[])
     SDL_SetRenderTarget(renderer, NULL);
     SDL_RenderPresent(renderer);
 
-    SDL_RenderCopy(renderer, texture, NULL, &rect);
+    //SDL_RenderCopy(renderer, texture, NULL, &rect);
+    SDL_QueryTexture(texture,NULL,NULL,&dim.w,&dim.h);
+    SDL_RenderCopy(renderer, texture, NULL, &dim);
     SDL_RenderPresent(renderer);
+
+
 
 //        Uint32 color = SDL_MapRGB(surface->format,100,00,120); /*On applique un RGB sur la surface*/
 //        Uint32 color2 = SDL_MapRGB(surface2->format,0,100,255);/*On applique un RGB sur la surface*/

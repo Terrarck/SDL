@@ -151,3 +151,6 @@ Une texture est un rectangle de pixels indépendant du renderer et peut être af
 
 23) SDL_RenderCopy : A quoi sert cette méthode, donnez le code pour tester cette méthode (10 points)
 SDL_RenderCopy permet d'afficher la texture que l'on a paramètrer.
+
+24) SDL_QueryTexture : A quoi sert cette méthode, donnez le code pour tester cette méthode (10 points) 
+SDL_QueryTexture permet d'obtenir les dimensions de la texture.
