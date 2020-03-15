@@ -127,3 +127,8 @@ SDL_RenderDrawPoints(renderer,const SDL_Point* points, count).
 Il y a deux fonctions pour dessiner des lignes une pour une seul et une autre pour un ensemble de lignes.
 SDL_RenderDrawLine(renderer,x1,y1,x2,y2).
 SDL_RenderDrawLines(renderer,const SDL_Point* points, count).
+
+15) A quoi servent les fonctions SDL_RenderClear et SDL_RenderPresent (5 points) 
+SDL_RenderClear applique une couleur sur l’ensemble de la fenêtre.
+SDL_RenderPresent sert à mettre à jours l'affichage avec les modifications apportée sur le renderer.
+
