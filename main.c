@@ -7,6 +7,8 @@ int main(int argc, char *argv[])
     /**Variable**/
     SDL_Window *Window = NULL;/*On initialise la fenêtre*/
     SDL_Renderer* renderer;/*Déclaration du renderer*/
+    SDL_Rect rect = {20,20,100,100};/*On initialise un rectangle (position X, position Y, largeur, hauteur)*/
+    SDL_Point point = {20,40};/*On initialise point position X, position Y*/
 
     /**Initialisation**/
     if(0 != SDL_Init(SDL_INIT_EVERYTHING))/* initialisation*/
@@ -26,7 +28,7 @@ int main(int argc, char *argv[])
     }
 
     // Création du renderer
-    renderer = SDL_CreateRenderer(fenetre, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+    renderer = SDL_CreateRenderer(Window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
     /**Renderer Error**/
     if(NULL == renderer)
