@@ -139,3 +139,7 @@ SDL_Delay applique un delai en mettant en pause la suite du programme jusqu'à c
 Une surface est l'équivalent des textures mais leur avantage est quel est modifiable pixel par pixel. 
 
 18) Donnez le code permettant de créer une surface (10 points) 
+
+19) Dessiner dans une surface : Donnez le code de la fonction SDL_FillRect (10 points) 
+
+20) SDL_BlitSurface(..) : donnez le code pour tester cette méthode. (5 points) 
