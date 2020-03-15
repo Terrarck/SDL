@@ -146,3 +146,5 @@ Une surface est l'équivalent des textures mais leur avantage est quel est modif
 
 21) Les textures : Qu’est-ce qu’une texture ? Donnez le code permettant de créer une texture. (10 points) 
 Une texture est un rectangle de pixels indépendant du renderer et peut être afficher.
+
+22) Dessinez dans une texture : SDL_RenderTarget, donnez le code pour tester cette méthode. (10 points) 
